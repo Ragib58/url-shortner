@@ -3,15 +3,16 @@ version : '3'
 
 services:
    api:
-    context: .
-    dockerfile: Dockerfile
-   ports:
-      - "8000:8080"
-   depend_on:
+    build:
+     context: .
+     dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
       - db 
    db:   
-     build: ./db
-     ports:
+    build: ./db
+    ports:
       - "6379:6379"
-     volumes:
-         - .data:/data
+    volumes:
+         - ./data:/data
