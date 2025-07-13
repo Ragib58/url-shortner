@@ -7,6 +7,7 @@
    * Edit or delete URLs
    * Add tags to URLs
 
+
 # Running the App
 1. Ensure Docker and Docker Compose are installed.
 2. Fix the volumes path in `docker-compose.yml` to `./data:/data` if not already set.
